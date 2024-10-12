@@ -1,0 +1,40 @@
+/* 페이지 타이틀 */
+.img-title {
+  text-align: center;
+  font-size: 24px;
+}
+
+.img-title img {
+  display: block;
+  height: 120px;
+  margin: auto;
+  margin-bottom: 29px;
+}
+
+.img-title strong {
+  color: #29363d;
+  font-size: 24px;
+  font-family: 'Pretendard-Bold';
+  box-shadow: inset 0 -0.5em 0 rgba(255, 79, 110, 0.2);
+  border-bottom: 2px solid #ff4f6e;
+}
+
+/* main */
+.main {
+  width: 392px;
+  margin: 71px auto 0;
+}
+
+/* form */
+.main .form {
+  width: 100%;
+  margin: 40px auto 50px;
+  /* background-color: darkorange; */
+}
+
+/* loading, error */
+.message {
+  display: inline-block;
+  margin-top: 10px;
+  color: #29363d;
+}

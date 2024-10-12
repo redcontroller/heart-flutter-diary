@@ -1,0 +1,88 @@
+/* header */
+.header {
+  background-color: white;
+}
+
+.header .max-width {
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  width: 156px;
+}
+
+.logo {
+  height: 75px;
+}
+
+.header .login-text {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  /* background-color: skyblue; */
+}
+
+.header .login-text p::after {
+  content: '|';
+  color: #d8ddde;
+  margin-left: 24px;
+}
+
+.header .login-text p strong {
+  font-family: 'Pretendard-Bold';
+  box-shadow: inset 0 -0.5em 0 rgba(255, 79, 110, 0.8);
+}
+
+@media (min-width: 601px) {
+  .header .login-text p::after {
+    content: '|';
+    color: #d8ddde;
+    margin-left: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header .login-text p {
+    position: absolute;
+    top: 140px;
+    right: 0;
+  }
+}
+
+@media (max-width: 360px) {
+  .header .login-text button {
+    position: absolute;
+    top: 170px;
+    right: 8px;
+    background-color: #fffaf0;
+  }
+}
+
+/* a-button  */
+/* .btn-join,
+  .btn-login,
+  .btn-logout */
+[class^='Header_btn'] {
+  color: #5a6a72;
+  display: inline-flex;
+  align-items: center;
+  height: 40px;
+  padding: 1em 1em 1em 2.8em;
+  text-decoration: none;
+  background-color: black;
+}
+
+.btn-join {
+  background: url(../images/icon-join.svg) no-repeat 0.8em center/ 2em;
+}
+
+.btn-login {
+  background: url(../images/icon-login.svg) no-repeat 0.8em center/ 2em;
+}
+
+.btn-logout {
+  background: url(../images/icon-logout.svg) no-repeat 0.8em center/ 2em;
+}

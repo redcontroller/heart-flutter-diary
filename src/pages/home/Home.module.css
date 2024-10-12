@@ -1,0 +1,52 @@
+/* CSS 적용 */
+.heart-title {
+  font-family: 'Pretendard-Bold';
+  line-height: 1;
+  padding: 0.5em 0 0.5em 2em;
+  font-size: 20px;
+  background: url(../../images/heart.svg) no-repeat 0 0 / 2em;
+  margin-bottom: 16px;
+}
+
+/* main layout */
+.main {
+  display: flex;
+  gap: 40px;
+}
+
+.main > section {
+  flex-basis: 0;
+}
+
+.main .main-form {
+  min-width: 360px;
+  padding: 56px 39px 56px 0;
+  border-right: 1px solid #ff4f6e;
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+.main .main-diary {
+  flex-grow: 2;
+}
+
+@media (max-width: 1024px) {
+  .main {
+    flex-direction: column;
+    margin: 40px auto;
+  }
+
+  .main .main-form {
+    min-width: 100%;
+    border: 0;
+    padding: 0;
+  }
+}
+
+/* empty, loading, error */
+.message {
+  height: 100%;
+  color: #29363d;
+  display: flex;
+  align-items: center;
+}
