@@ -7,12 +7,13 @@ export default function Signup() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   // displayName은 파이어베이스에서 유저 정보에 저장 할 수 있는 속성중 하나입니다.
-  // 때문에 다른 변수명을 사용하지 말아주세요. ( 참고 : https://firebase.google.com/docs/reference/js/auth.md#updateprofile)
+  // 때문에 다른 변수명을 사용하지 말아주세요. (참고 : https://firebase.google.com/docs/reference/js/auth.md#updateprofile)
   const [displayName, setDisplayName] = useState('');
 
   // 직접 만든 useSignup 커스텀 훅을 이용
   // eslint-disable-next-line no-unused-vars
   const { error, isPending, signup } = useSignup();
+  const subString = 'auth/email-already-in-use';
 
   const handleData = (event) => {
     if (event.target.type === 'email') {
@@ -173,7 +174,6 @@ export default function Signup() {
         </svg>
         <strong className={styles.line}>회원가입</strong>
       </h2>
-
       <form className={styles['form']} onSubmit={handleSubmit}>
         <div>
           <label htmlFor="user-email">이메일</label>
@@ -185,7 +185,6 @@ export default function Signup() {
             value={email}
           />
         </div>
-
         <div>
           <label htmlFor="user-pw">비밀번호</label>
           <input
@@ -197,7 +196,6 @@ export default function Signup() {
             autoComplete="current-password"
           />
         </div>
-
         <div>
           <label htmlFor="user-nickname">닉네임</label>
           <input
@@ -208,10 +206,12 @@ export default function Signup() {
             value={displayName}
           ></input>
         </div>
-
         <button className="black-btn" type="submit">
           회원가입
         </button>
+        {error.includes(subString) && (
+          <strong className={styles.message}>이미 가입된 email입니다.</strong>
+        )}
       </form>
     </main>
   );

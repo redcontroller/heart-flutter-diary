@@ -62,6 +62,7 @@
   line-height: 1.4;
   clear: both;
   margin-top: 40px;
+  word-break: keep-all;
 }
 
 .button-group {
