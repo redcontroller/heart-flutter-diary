@@ -1,9 +1,8 @@
 import React from 'react';
 import styles from './DiaryList.module.css';
-import iconEdit from '../images/icon-edit.svg';
-import iconDelete from '../images/icon-delete.svg';
-// eslint-disable-next-line no-unused-vars
-import { deleteDocument, useFirestore } from '../hooks/useFirestore';
+import iconEdit from 'images/icon-edit.svg';
+import iconDelete from 'images/icon-delete.svg';
+import { useFirestore } from '../hooks/useFirestore';
 import getToday from '../util/formatDate';
 
 export default function DiaryList({ diaries }) {

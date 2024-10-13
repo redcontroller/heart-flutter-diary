@@ -4,14 +4,16 @@ import 'normalize.css';
 import './index.css';
 import App from './App';
 import { AuthContextProvider } from './context/AuthContext';
-import Footer from './components/Footer';
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <AuthContextProvider>
       <App />
-      <Footer />
+      <Analytics />
+      <SpeedInsights />
     </AuthContextProvider>
   </React.StrictMode>
 );

@@ -4,6 +4,7 @@ import Login from './pages/login/Login';
 import Signup from './pages/signup/Signup';
 import Header from './components/Header';
 import { useAuthContext } from './hooks/useAuthContext';
+import Footer from './components/Footer';
 
 function App() {
   const { isAuthReady, user } = useAuthContext();
@@ -28,6 +29,7 @@ function App() {
               element={!user ? <Signup /> : <Navigate replace={true} to="/" />}
             />
           </Routes>
+          <Footer />
         </BrowserRouter>
       ) : (
         <h1 className="loading">Loading ...</h1>

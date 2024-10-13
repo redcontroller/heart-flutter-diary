@@ -1,6 +1,6 @@
 import styles from './Header.module.css';
 import { Link, useLocation } from 'react-router-dom';
-import logo from '../images/logo.svg';
+import logo from 'images/logo.svg';
 import { useLogout } from '../hooks/useLogout';
 import { useAuthContext } from '../hooks/useAuthContext';
 
