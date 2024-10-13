@@ -4,6 +4,7 @@
 
 # 테스트 계정
 
+실행 링크: https://heart-flutter-diary.vercel.app/
 ID: test@diary.com
 PW: 11111111
 
