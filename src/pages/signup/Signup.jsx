@@ -209,7 +209,7 @@ export default function Signup() {
         <button className="black-btn" type="submit">
           회원가입
         </button>
-        {error.includes(subString) && (
+        {error && error.includes(subString) && (
           <strong className={styles.message}>이미 가입된 email입니다.</strong>
         )}
       </form>
